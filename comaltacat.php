@@ -42,7 +42,7 @@ if (!isset($_POST) || empty($_POST)) {
 	$id_categoria=$_POST["idcategoria"];
 	$categoria=$_POST["nombre"];
 	
-	$sql1= "INSERT INTO categoria(ID_CATEGORIA, NOMBRE)
+	$sql1= "INSERT INTO CATEGORIA(ID_CATEGORIA, NOMBRE)
 			VALUES ('$id_categoria', '$categoria');";
 	
 	
