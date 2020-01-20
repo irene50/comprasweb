@@ -54,11 +54,11 @@ if (!isset($_POST) || empty($_POST)) {
     $precio=$_POST['precio'];
 
     $idcategoria=$_POST['categoria'];
-	$sql = "SELECT ID_CATEGORIA FROM categoria WHERE NOMBRE= '$idcategoria' ";
+	$sql = "SELECT ID_CATEGORIA FROM CATEGORIA WHERE NOMBRE= '$idcategoria' ";
 	$resultado=mysqli_query($db, $sql);//el resultado no es valido, hay que tratarlo
     $row=mysqli_fetch_assoc($resultado);    
     $id=$row['ID_CATEGORIA'];
-	$sql = "INSERT INTO producto (ID_PRODUCTO, NOMBRE, PRECIO, ID_CATEGORIA) VALUES ('$idproducto', '$nombre', '$precio', '$id')";
+	$sql = "INSERT INTO PRODUCTO (ID_PRODUCTO, NOMBRE, PRECIO, ID_CATEGORIA) VALUES ('$idproducto', '$nombre', '$precio', '$id')";
 
    
     if (mysqli_query($db, $sql)) {
